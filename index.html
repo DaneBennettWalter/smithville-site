@@ -88,9 +88,7 @@
     }
     .hero-bg {
       position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-      background-image: url('images/aerial-river-sandy-bank.jpg');
-      background-size: cover; background-position: center 40%;
-      filter: brightness(0.35);
+      background: linear-gradient(135deg, #1A1A1A 0%, #2A2A1A 50%, #1A1A1A 100%);
     }
     .hero::after {
       content: '';
@@ -143,6 +141,7 @@
     /* PHOTO GALLERY */
     .gallery {
       display: grid; grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
       gap: 4px; max-height: 500px; overflow: hidden;
     }
     .gallery img {
@@ -385,8 +384,11 @@
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .nav-mobile-toggle { display: block; }
-      .hero { padding: 0 1.5rem 4rem; }
-      .hero-stats { gap: 2rem; }
+      .hero { padding: 0 1.5rem 3rem; min-height: auto; padding-top: 6rem; }
+      .hero h1 { font-size: 2rem; }
+      .hero-subtitle { font-size: 1rem; }
+      .hero-stats { gap: 1.5rem; }
+      .hero-scroll { display: none; }
       section { padding: 5rem 1.5rem; }
       .gallery { grid-template-columns: 1fr 1fr; max-height: 300px; }
       .gallery-main { grid-row: span 1; }
@@ -461,6 +463,7 @@
   <section id="gallery" style="padding: 0;">
     <div class="gallery">
       <img class="gallery-main" src="images/riverfront-sandy-shore.jpg" alt="Colorado River sandy shoreline" loading="lazy">
+      <img src="images/aerial-river-sandy-bank.jpg" alt="Aerial view of river sandy bank" loading="lazy">
       <img src="images/aerial-river-trees.jpg" alt="Aerial view of river and trees" loading="lazy">
       <img src="images/riverfront-green-bank.jpg" alt="River frontage with green banks" loading="lazy">
       <img src="images/aerial-river-countryside.jpg" alt="Aerial river winding through countryside" loading="lazy">
@@ -673,7 +676,7 @@
         </div>
         <div class="location-map">
           <a href="https://www.google.com/maps/place/663+SH+230+Loop,+Smithville,+TX+78957" target="_blank">
-            <img src="images/Survey.jpg" alt="Property survey map" loading="lazy">
+            <img src="images/smithville-survey.png" alt="Property survey map — 31.18 acres, Smithville TX" loading="lazy">
           </a>
         </div>
       </div>
